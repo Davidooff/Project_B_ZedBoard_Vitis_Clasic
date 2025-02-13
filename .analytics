@@ -233,3 +233,7 @@ timestamp=[2025-02-12 17:37:33], mode=BUILD, duration=0:00:00.883, duration_ms=8
 timestamp=[2025-02-12 17:39:21], mode=BUILD, duration=0:00:00.848, duration_ms=848, data={name=test, configuration=Debug, clean_build=false}
 timestamp=[2025-02-12 17:46:25], mode=BUILD, duration=0:00:00.914, duration_ms=914, data={name=test, configuration=Debug, clean_build=false}
 timestamp=[2025-02-12 17:47:53], mode=BUILD, duration=0:00:00.860, duration_ms=860, data={name=test, configuration=Debug, clean_build=false}
+timestamp=[2025-02-13 21:41:39], mode=WORKBENCH_START, duration=0:00:10.198, duration_ms=10198, data={}
+timestamp=[2025-02-13 21:41:39], mode=WORKBENCH_UI_INIT, duration=0:00:00.149, duration_ms=149, data={editors_count=6, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,test,test_system}
+timestamp=[2025-02-13 21:41:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.128, duration_ms=128, data={}
+timestamp=[2025-02-13 21:41:57], mode=BUILD, duration=0:00:00.390, duration_ms=390, data={name=test, configuration=Debug, clean_build=false}
