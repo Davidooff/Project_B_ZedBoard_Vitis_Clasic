@@ -1,0 +1,28 @@
+18:48:19 **** Incremental Build of configuration Debug for project potato ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/david/workspace/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc:1:24: warning: extra tokens at end of #include directive
+    1 | #include "xil_printf.h";
+      |                        ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: potato.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/david/workspace/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "potato.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: potato.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size potato.elf  |tee "potato.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  86784	   3344	  88728	 178856	  2baa8	potato.elf
+'Finished building: potato.elf.size'
+' '
+
+18:48:20 Build Finished (took 823ms)
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="potato_temp_system-bitFile" value="${project_loc:potato_temp}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="potato_temp_system-bmmFile" value=""/>
+	<item key="potato_temp_system-target" value="Local"/>
+	<item key="potato_temp_system-device" value="Auto Detect"/>
+	<item key="potato_temp_system-partial_bit" value="false"/>
+	<item key="potato_temp_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="test_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248518661&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248518661-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248518661-23727093-0&quot;}}]}"/>
+	<item key="potat_system-bitFile" value="${project_loc:potat}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="potat_system-bmmFile" value=""/>
+	<item key="potat_system-target" value="Local"/>
+	<item key="potat_system-device" value="Auto Detect"/>
+	<item key="potat_system-partial_bit" value="false"/>
+	<item key="potat_system-skip_rev_check" value="false"/>
+	<item key="potato_system-bitFile" value="${project_loc:potato}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="potato_system-bmmFile" value=""/>
+	<item key="potato_system-target" value="Local"/>
+	<item key="potato_system-device" value="Auto Detect"/>
+	<item key="potato_system-partial_bit" value="false"/>
+	<item key="potato_system-skip_rev_check" value="false"/>
+	<item key="potat_main_system-bitFile" value="${project_loc:potat_main}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="potat_main_system-bmmFile" value=""/>
+	<item key="potat_main_system-target" value="Local"/>
+	<item key="potat_main_system-device" value="Auto Detect"/>
+	<item key="potat_main_system-partial_bit" value="false"/>
+	<item key="potat_main_system-skip_rev_check" value="false"/>
+	<item key="test_system-bitFile" value="${project_loc:test}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="test_system-bmmFile" value=""/>
+	<item key="test_system-target" value="Local"/>
+	<item key="test_system-device" value="Auto Detect"/>
+	<item key="test_system-partial_bit" value="false"/>
+	<item key="test_system-skip_rev_check" value="false"/>
+</section>

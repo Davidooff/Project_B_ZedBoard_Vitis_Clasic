@@ -1,0 +1,67 @@
+#include "xuartps.h"
+#include "UartImp.h"
+#include "TemperatureData.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+UartImp::UartImp(){
+    int Status;
+
+	Config = XUartPs_LookupConfig(0);
+	if(!Config) {
+		xil_printf("UART config is undefined");
+	}
+
+	Status = XUartPs_CfgInitialize(&Uart_PS, Config, Config->BaseAddress);
+	XUartPs_SetBaudRate(&Uart_PS, 1200);
+	if(Status == XST_SUCCESS){
+		xil_printf("UART seted up");
+	} else {
+		xil_printf("!Error while setting up UART!");
+	}
+}
+
+void UartImp::u32_to_u8_4( u32 value, u8 array[4] )
+{
+  array[0] = value >> 24;
+  array[1] = value >> 16;
+  array[2] = value >>  8;
+  array[3] = value >>  0;
+}
+
+
+int UartImp::send(TemperatureSample *TemperatureSample, int size){
+	static u8 start_of_data[4] = {1,1,1,1};
+	static u8 u32_in_u8[4];
+	static u8 answer_byte;
+	for(int i = 0; i < size; i++){
+		xil_printf("Starting package sending %d\r\n", TemperatureSample[i].temperature);
+		u32_to_u8_4(TemperatureSample[i].timestamp, u32_in_u8);
+
+
+		XUartPs_Send(&Uart_PS, start_of_data, 4);
+		UartImp::whileUntilSend();
+		usleep(50);
+
+		XUartPs_Send(&Uart_PS, (u8*) TemperatureSample[i].temperature, 1);
+		UartImp::whileUntilSend();
+		usleep(50);
+
+		XUartPs_Send(&Uart_PS, u32_in_u8, sizeof (u32_in_u8) / 4);
+		UartImp::whileUntilSend();
+		usleep(100);
+
+		answer_byte = XUartPs_RecvByte 	( 	Config->BaseAddress	); //Blocking thread
+		if (answer_byte != 0) {
+			xil_printf("Answer byte: %d \r\n", answer_byte);
+			return (int) answer_byte;
+		}
+	}
+	return 0;
+}
+
+void UartImp::whileUntilSend() {
+	while (XUartPs_IsSending(&Uart_PS)){ xil_printf("Processing it...\r\n"); }
+}
+
+

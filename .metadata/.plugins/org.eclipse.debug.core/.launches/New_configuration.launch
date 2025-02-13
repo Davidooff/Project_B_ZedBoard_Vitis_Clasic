@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.xilinx.opencl.launch.openCLLaunch.tcf">
+    <booleanAttribute key="POWER_PROFILE" value="false"/>
+    <stringAttribute key="SDACCEL_DATA_TRANSFER_TRACE" value="coarse"/>
+    <booleanAttribute key="SDACCEL_ENABLE_LOP_TRACE" value="false"/>
+    <booleanAttribute key="SDACCEL_ENABLE_PROFILE" value="true"/>
+    <stringAttribute key="SDACCEL_STALL_TRACE" value="off"/>
+    <stringAttribute key="SDACCEL_TIMELINE_REPORT_STRING" value="Default"/>
+    <booleanAttribute key="SDX_DO_BINARY_CONTAINERS_ARGS" value="true"/>
+    <booleanAttribute key="SDX_USE_DEFAULT_WORKING_DIR" value="true"/>
+    <stringAttribute key="TRACE_BUFFER_SIZE" value="1M"/>
+    <stringAttribute key="TRACE_INTERVAL" value="10"/>
+    <booleanAttribute key="TRACE_OFFLOAD" value="false"/>
+    <stringAttribute key="com.xilinx.ide.dc.standalone.debug.executable" value=""/>
+    <stringAttribute key="com.xilinx.ide.dc.standalone.debug.kernels" value=""/>
+    <stringAttribute key="com.xilinx.ide.dc.standalone.debug.target.flow" value="sw_emu"/>
+    <booleanAttribute key="com.xilinx.sdx.internal.opencl.language.ui.launch.tcf.stop_at_kernal_start" value="true"/>
+    <booleanAttribute key="com.xilinx.sdx.internal.opencl.language.ui.launch.tcf.stop_at_main" value="true"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value=""/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="&lt;None&gt;"/>
+    <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
+    <stringAttribute key="org.eclipse.cdt.launch.WORKING_DIRECTORY" value="${workspace_loc:potato_temp}/Debug/New_configuration"/>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="ENHANCED_CPU_EM" value="true"/>
+        <mapEntry key="XILINX_OPENCL" value="${env_var:XILINX_VITIS}/"/>
+        <mapEntry key="XILINX_VITIS" value="${env_var:XILINX_VITIS}/"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.tcf.debug.AttachChildren" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.DisconnectOnCtxExit" value="true"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.UseContextFilter" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.UseTerminal" value="true"/>
+</launchConfiguration>
