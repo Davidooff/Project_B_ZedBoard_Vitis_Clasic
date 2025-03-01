@@ -59,3 +59,19 @@ bsp reload
 catch {bsp regenerate}
 platform generate -domains freertos10_xilinx_ps7_cortexa9_0 
 platform active {design_1_wrapper}
+platform active {design_1_wrapper}
+platform generate -domains 
+platform active {design_1_wrapper}
+domain active {zynq_fsbl}
+bsp reload
+domain active {freertos10_xilinx_ps7_cortexa9_0}
+bsp reload
+bsp reload
+platform generate
+platform clean
+platform generate
+platform active {design_1_wrapper}
+bsp reload
+bsp write
+platform generate -domains 
+bsp reload

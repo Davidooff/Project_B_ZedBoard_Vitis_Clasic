@@ -1,9 +1,24 @@
-Nothing to build in platform 'design_1_wrapper'
+Nothing to build in platform 'no-rtos'
 
-21:41:57 **** Incremental Build of configuration Debug for project test ****
+13:33:10 **** Incremental Build of configuration Debug for project no-rtos-proj ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/david/workspace/no-rtos/export/no-rtos/sw/no-rtos/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: no-rtos-proj.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/david/workspace/no-rtos/export/no-rtos/sw/no-rtos/standalone_domain/bsplib/lib -o "no-rtos-proj.elf"  ./src/SDCard.o ./src/TemperatureData.o ./src/UartImp.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group
+'Finished building target: no-rtos-proj.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size no-rtos-proj.elf  |tee "no-rtos-proj.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 170641	   2716	  26272	 199629	  30bcd	no-rtos-proj.elf
+'Finished building: no-rtos-proj.elf.size'
+' '

@@ -1,0 +1,18 @@
+13:44:31 **** Incremental Build of configuration Debug for project new2- ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/david/workspace/new2/export/new2/sw/new2/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc:29:10: fatal error: platform.h: No such file or directory
+   29 | #include "platform.h"
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [src/subdir.mk:43: src/main.o] Error 1
+make: *** [makefile:46: all] Error 2
+
+13:44:31 Build Finished (took 341ms)
+

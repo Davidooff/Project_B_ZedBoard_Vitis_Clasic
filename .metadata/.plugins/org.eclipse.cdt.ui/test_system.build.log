@@ -1,7 +1,7 @@
-17:02:52 **** Incremental Build of configuration Debug for project test_system ****
+22:45:34 **** Incremental Build of configuration Debug for project test_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 65272 C:/Users/david/workspace/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm freertos10_xilinx_ps7_cortexa9_0 C:/Users/david/workspace/test_system/Debug/system.bif
+generate_system_bif.bat 55638 C:/Users/david/workspace/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm freertos10_xilinx_ps7_cortexa9_0 C:/Users/david/workspace/test_system/Debug/system.bif
 ECHO is off.
 ECHO is off.
 sdcard_gen --xpfm C:/Users/david/workspace/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/david/workspace/test_system/Debug/system.bif --bitstream C:/Users/david/workspace/test/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/david/workspace/test/Debug/test.elf,ps7_cortexa9_0
@@ -10,5 +10,5 @@ ECHO is off.
 creating BOOT.BIN using C:/Users/david/workspace/test/_ide/bitstream/design_1_wrapper.bit
 Running C:/Xilinx/Vitis/2023.2/bin/bootgen  -image C:/Users/david/workspace/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-17:03:00 Build Finished (took 8s.240ms)
+22:45:41 Build Finished (took 6s.210ms)
 

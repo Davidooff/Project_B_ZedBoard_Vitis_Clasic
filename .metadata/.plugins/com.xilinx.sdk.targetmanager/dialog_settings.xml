@@ -7,7 +7,7 @@
 	<item key="potato_temp_system-partial_bit" value="false"/>
 	<item key="potato_temp_system-skip_rev_check" value="false"/>
 	<item key="programfpga.sdxproject" value="test_system"/>
-	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248518661&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248518661-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248518661-23727093-0&quot;}}]}"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248517930&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248517930-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248517930-23727093-0&quot;}}]}"/>
 	<item key="potat_system-bitFile" value="${project_loc:potat}/_ide/bitstream/design_1_wrapper.bit"/>
 	<item key="potat_system-bmmFile" value=""/>
 	<item key="potat_system-target" value="Local"/>

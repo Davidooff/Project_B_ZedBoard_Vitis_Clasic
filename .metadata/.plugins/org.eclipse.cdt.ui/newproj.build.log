@@ -1,0 +1,32 @@
+13:28:27 **** Incremental Build of configuration Debug for project newproj ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/david/workspace/new/export/new/sw/new/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void xWaitForUart(void*)':
+../src/main.cc:72:20: warning: unused variable 'buffer' [-Wunused-variable]
+   72 |                 u8 buffer[1] = {0};
+      |                    ^~~~~~
+../src/main.cc:68:26: warning: unused variable 'temperatureData' [-Wunused-variable]
+   68 |         TemperatureData* temperatureData = static_cast<TemperatureData*>(pvParameters);
+      |                          ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: newproj.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/david/workspace/new/export/new/sw/new/freertos10_xilinx_domain/bsplib/lib -o "newproj.elf"  ./src/SDCard.o ./src/TemperatureData.o ./src/UartImp.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group
+'Finished building target: newproj.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size newproj.elf  |tee "newproj.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197305	   3500	  92384	 293189	  47945	newproj.elf
+'Finished building: newproj.elf.size'
+' '
+
+13:28:28 Build Finished (took 1s.309ms)
+
